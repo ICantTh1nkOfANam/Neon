@@ -1,0 +1,16 @@
+C:\source\Neon\ne\bin\Debug\net5.0\ne.exe
+C:\source\Neon\ne\bin\Debug\net5.0\ne.deps.json
+C:\source\Neon\ne\bin\Debug\net5.0\ne.runtimeconfig.json
+C:\source\Neon\ne\bin\Debug\net5.0\ne.runtimeconfig.dev.json
+C:\source\Neon\ne\bin\Debug\net5.0\ne.dll
+C:\source\Neon\ne\bin\Debug\net5.0\ref\ne.dll
+C:\source\Neon\ne\bin\Debug\net5.0\ne.pdb
+C:\source\Neon\ne\obj\Debug\net5.0\ne.csproj.AssemblyReference.cache
+C:\source\Neon\ne\obj\Debug\net5.0\ne.GeneratedMSBuildEditorConfig.editorconfig
+C:\source\Neon\ne\obj\Debug\net5.0\ne.AssemblyInfoInputs.cache
+C:\source\Neon\ne\obj\Debug\net5.0\ne.AssemblyInfo.cs
+C:\source\Neon\ne\obj\Debug\net5.0\ne.csproj.CoreCompileInputs.cache
+C:\source\Neon\ne\obj\Debug\net5.0\ne.dll
+C:\source\Neon\ne\obj\Debug\net5.0\ref\ne.dll
+C:\source\Neon\ne\obj\Debug\net5.0\ne.pdb
+C:\source\Neon\ne\obj\Debug\net5.0\ne.genruntimeconfig.cache
