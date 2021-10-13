@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Neon.Analysis
+namespace N.Analysis
 {
     class Lexer
         {

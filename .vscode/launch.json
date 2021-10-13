@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/Neon/bin/Debug/net5.0/Neon.dll",
+            "program": "${workspaceFolder}/N/bin/Debug/net5.0/N.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Neon",
+            "cwd": "${workspaceFolder}/N",
             "console": "externalTerminal",
             "stopAtEntry": false
         },

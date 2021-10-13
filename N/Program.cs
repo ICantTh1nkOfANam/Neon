@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
-using Neon.Analysis;
+using N.Analysis;
 
-namespace Neon
+namespace N
 {
     class Program
     {
@@ -16,7 +16,7 @@ namespace Neon
                 Console.Write("$ ");
                 var line = Console.ReadLine();
                 if (string.IsNullOrWhiteSpace(line))
-                    return;
+                    break;
 
                 if (line == "toggletree")
                 {
@@ -58,6 +58,7 @@ namespace Neon
                     Console.WriteLine(result); 
                 }
             }
+        return;
         }
 
         static void PrettyPrint(Node _node, string _indent = "")

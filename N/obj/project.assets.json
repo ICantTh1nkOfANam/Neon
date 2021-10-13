@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\source\\Neon\\Neon\\Neon.csproj",
-      "projectName": "Neon",
-      "projectPath": "C:\\source\\Neon\\Neon\\Neon.csproj",
+      "projectUniqueName": "C:\\source\\Neon\\N\\N.csproj",
+      "projectName": "N",
+      "projectPath": "C:\\source\\Neon\\N\\N.csproj",
       "packagesPath": "C:\\Users\\J\\.nuget\\packages\\",
-      "outputPath": "C:\\source\\Neon\\Neon\\obj\\",
+      "outputPath": "C:\\source\\Neon\\N\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\J\\AppData\\Roaming\\NuGet\\NuGet.Config",
