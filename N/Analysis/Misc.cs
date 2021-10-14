@@ -4,34 +4,34 @@ using System.Linq;
 
 namespace N.Analysis
 {
-    abstract class Node
+    public abstract class Node
         {
             public abstract TokenType type { get; }
             public abstract IEnumerable<Node> GetChildren();
         }
 
-        abstract class Expression : Node
+        public abstract class Expression : Node
         {
 
         }
 
-        sealed class NumberExpr : Expression
+        public sealed class LiteralExpr : Expression
         {
-            public NumberExpr(Token _number)
+            public LiteralExpr(Token _literal)
             {
-                numberToken = _number;
+                literalToken = _literal;
             }
             
-            public override TokenType type => TokenType.NumberExpr;
-            public Token numberToken { get; }
+            public override TokenType type => TokenType.LiteralExpr;
+            public Token literalToken { get; }
 
             public override IEnumerable<Node> GetChildren()
             {
-                yield return numberToken;
+                yield return literalToken;
             }
         }
 
-        sealed class BinaryExpr : Expression
+        public sealed class BinaryExpr : Expression
         {
             public BinaryExpr(Expression _left, Token _operator, Expression _right)
             {
@@ -53,7 +53,7 @@ namespace N.Analysis
             }
         }
 
-        sealed class ParenthesisExpr : Expression
+        public sealed class ParenthesisExpr : Expression
         {
             public ParenthesisExpr(Token _open, Expression _expr, Token _close)
             {
@@ -75,7 +75,7 @@ namespace N.Analysis
             }
         }
 
-        sealed class SyntaxTree
+        public sealed class SyntaxTree
         {
             public SyntaxTree(IEnumerable<string> _diagnostics, Expression _root, Token _endOfFile)
             {
@@ -89,16 +89,16 @@ namespace N.Analysis
             public Token endOfFile { get; }
         }
 
-        enum TokenType
+        public enum TokenType
         {
             Number, WhiteSpace,
             MathAdd, MathSubtract, MathMultiply, MathDivide,
             OpenParenthesis, CloseParenthesis,
             BadToken, EndOfFile,
-            NumberExpr, BinaryExpr, ParenthesizedExpr
+            LiteralExpr, BinaryExpr, ParenthesizedExpr
         }
 
-        class Token : Node
+        public class Token : Node
         {
             public override TokenType type { get; }
             public int position { get; }

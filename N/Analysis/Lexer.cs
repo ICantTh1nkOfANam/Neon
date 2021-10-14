@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace N.Analysis
 {
-    class Lexer
+    internal sealed class Lexer
         {
             private readonly string m_Text;
             private int m_Position;
@@ -58,19 +58,21 @@ namespace N.Analysis
                     var text = m_Text.Substring(start, length);
                     return new Token(TokenType.WhiteSpace, start, text, null);
                 }
-
-                if (Current == '+')
-                    return new Token(TokenType.MathAdd, m_Position++, "+", null);
-                else if (Current == '-')
-                    return new Token(TokenType.MathSubtract, m_Position++, "-", null);
-                else if (Current == '*')
-                    return new Token(TokenType.MathMultiply, m_Position++, "*", null);
-                else if (Current == '/')
-                    return new Token(TokenType.MathDivide, m_Position++, "/", null);
-                else if (Current == '(')
-                    return new Token(TokenType.OpenParenthesis, m_Position++, "(", null);
-                else if (Current == ')')
-                    return new Token(TokenType.CloseParenthesis, m_Position++, ")", null);
+                switch(Current)
+                {
+                    case '+':
+                        return new Token(TokenType.MathAdd, m_Position++, "+", null);
+                    case '-':
+                        return new Token(TokenType.MathSubtract, m_Position++, "-", null);
+                    case '*':
+                        return new Token(TokenType.MathMultiply, m_Position++, "*", null);
+                    case '/':
+                        return new Token(TokenType.MathDivide, m_Position++, "/", null);
+                    case '(':
+                        return new Token(TokenType.OpenParenthesis, m_Position++, "(", null);
+                    case ')':
+                        return new Token(TokenType.CloseParenthesis, m_Position++, ")", null);
+                }
 
                 m_Diagnostics.Add($"Syntax Error: Unexpected Token: '{Current}'");
                 return new Token(TokenType.BadToken, m_Position++, m_Text.Substring(m_Position-1, 1), null);

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace N.Analysis
 {
-    class Parser
+    internal sealed class Parser
         {
             private readonly Token[] m_Tokens;
             private int m_Position;

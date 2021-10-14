@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace N.Analysis
 {
-    class Executor
+    public sealed class Executor
         {
             private readonly Expression _root;
             public Executor(SyntaxTree _tree)

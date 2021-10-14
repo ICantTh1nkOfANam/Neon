@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Linq;
-using System.Collections.Generic;
 using N.Analysis;
 
 namespace N
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            bool showTree = false;
+            var showTree = false;
             while (true)
             {
                 Console.Write("$ ");
@@ -36,12 +35,11 @@ namespace N
                 
                 var parser = new Parser(line);
                 var syntaxTree = parser.Parse();
-                var color = Console.ForegroundColor;
                 if (showTree)
                 {
                     Console.ForegroundColor = ConsoleColor.White;
                     PrettyPrint(syntaxTree.root);
-                    Console.ForegroundColor = color;
+                    Console.ResetColor();
                 }
 
                 if (syntaxTree.diagnostics.Any())
@@ -49,7 +47,7 @@ namespace N
                     Console.ForegroundColor = ConsoleColor.Red;
                     foreach(var diag in parser.Diagnostics)
                         Console.WriteLine(diag);
-                    Console.ForegroundColor = color;
+                    Console.ResetColor();
                 }
                 else
                 {
